@@ -1,0 +1,14 @@
+package boilerplate
+
+import (
+	"boilerplate/internal/ui"
+    "boilerplate/internal/users"
+)
+
+templ home(user *users.UserWithPermissions) {
+	@ui.Base(users.Navigation(user)) {
+		<div class="flex items-center justify-between gap-4 pb-4 h-16">
+			<h1 class="font-title text-xl">Boilerplate</h1>
+		</div>
+	}
+}
